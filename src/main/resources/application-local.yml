@@ -1,0 +1,22 @@
+spring:
+  profiles.active: local
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=ORACLE;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1
+    username: user
+    password: user
+    driver-class-name: org.h2.Driver
+    initialize: true
+# In case not embedded MongoDB may be used, just fill properties below
+#  data:
+#    mongodb:
+#      uri:
+#      username:
+#      password:
+#      host:
+#      port:
+#      database:
+#      repositories:
+#        enabled: true
